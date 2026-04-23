@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Article Tool"
+  short_description: "Draft, preview, and upload WeChat articles"
+  default_prompt: "Use $wechat-article-tool to write or edit a WeChat article, render a preview, and upload it as a draft through the WeChat API."
