@@ -1,4 +1,7 @@
 interface:
   display_name: "WeChat Article Tool"
   short_description: "Draft, preview, and upload WeChat articles"
+  icon_small: "./assets/icon-small.svg"
+  icon_large: "./assets/icon-large.png"
+  brand_color: "#2E8B57"
   default_prompt: "Use $wechat-article-tool to write or edit a WeChat article, render a preview, and upload it as a draft through the WeChat API."
