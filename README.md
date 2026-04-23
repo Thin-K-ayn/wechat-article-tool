@@ -17,6 +17,56 @@
 - 如果文章内容由 coding agent 直接写出来，你 **不需要** 额外配置 `LLM_API_KEY` 才能使用 `render` 和 `upload`
 - 只有当你想让这个 CLI 自己调用模型来生成文章时，才需要配置 `LLM_API_KEY` 并使用 `generate` / `run`
 
+## Repo 内置的 Agent Guidance 在哪里
+
+这个仓库现在有三层 agent 说明：
+
+- `README.md`
+  - 给人类读者看的总入口
+- `AGENTS.md`
+  - 给通用 coding agent 的仓库级说明
+- `CLAUDE.md`
+  - 给 Claude Code 的专门说明
+- `skills/wechat-article-tool/SKILL.md`
+  - 给 Codex 风格 skill 系统使用的 repo 内置 skill
+
+### 重要：clone repo 不等于自动启用 skill
+
+团队成员把 repo clone 下来之后：
+
+- `AGENTS.md` / `CLAUDE.md` 往往会被 agent 直接读到
+- 但 `SKILL.md` 通常不会因为仓库存在就自动安装到全局 skill 系统
+
+也就是说：
+
+- 对 `Claude Code` 来说，这个 repo 现在已经有比较明确的仓库级说明
+- 对 `Codex` 来说，如果想把它当成一个真正可触发的 skill，通常还需要把 `skills/wechat-article-tool/` 安装到 Codex 的 skills 目录里
+
+### 给 Codex 用户的两种使用方式
+
+#### 方式 1：直接在 repo 里工作
+
+让 Codex 直接打开这个仓库，然后按仓库说明使用：
+
+- 读 `README.md`
+- 读 `AGENTS.md`
+- 在需要时参考 `skills/wechat-article-tool/SKILL.md`
+
+这种方式已经能工作，只是它更像“repo guidance”，不一定是“全局已安装 skill”。
+
+#### 方式 2：把 repo 内置 skill 安装成全局 skill
+
+把这个目录复制到 Codex 的 skills 目录：
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R ./skills/wechat-article-tool ~/.codex/skills/
+```
+
+安装后，Codex 在合适场景下就更容易把它当成一个正式 skill 触发。
+
+如果你的团队已经在用 Codex 的 skill installer，也可以把这个 repo 作为 skill 源来安装。
+
 当前版本只保留一条通道：
 
 - `API`：调用公众号官方接口上传图片、创建草稿，再由你在手机端或公众号后台手动发布。
@@ -71,7 +121,7 @@ cp .env.example .env
 
 ## 配置
 
-把 [`.env.example`](/Users/kayngame/Documents/Playground/wechat-article-tool/.env.example) 复制成 `.env` 后，至少要填这几项：
+把 [`.env.example`](./.env.example) 复制成 `.env` 后，至少要填这几项：
 
 ```bash
 WECHAT_APP_ID=...
@@ -114,6 +164,15 @@ npm run tool -- upload --file ./articles/your-article.md
 npm run tool -- generate ...
 npm run tool -- run ...
 ```
+
+## 对 Agent 最重要的使用结论
+
+如果你是 coding agent，在这个 repo 里优先按下面这条规则工作：
+
+- 用户要你写或改文章：直接改 `./articles/*.md`
+- 用户要预览：运行 `npm run tool -- render --file ...`
+- 用户要推草稿：运行 `npm run tool -- upload --file ...`
+- 只有当用户明确要求“让 CLI 自己调用模型生成文章”时，才用 `generate` 或 `run`
 
 ## 第一次使用前必须做的事
 
@@ -336,4 +395,4 @@ npm run rasterize:svg -- ./assets/a.svg ./assets/b.svg
 
 ### 4. 哪个文件是给别人复制配置用的
 
-- [`.env.example`](/Users/kayngame/Documents/Playground/wechat-article-tool/.env.example)
+- [`.env.example`](./.env.example)
