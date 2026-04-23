@@ -25,6 +25,8 @@ This skill is for practical execution inside the repo, not generic WeChat advice
    - `npm run tool -- upload --file ./articles/<file>.md`
 4. tell the user to publish manually from the WeChat mobile or backend interface
 
+If the work is part of a series plan under `./plans/` and the user later confirms the article was published successfully, update the corresponding series plan file immediately so publish status is recorded there as the source of truth.
+
 ## Two operating modes
 
 ### 1. Agent-authored mode

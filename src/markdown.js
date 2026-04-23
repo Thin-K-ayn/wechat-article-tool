@@ -45,6 +45,7 @@ export function renderMarkdownToWechatHtml(markdown) {
   }
 
   applyStyles(article);
+  fixWechatListParagraphs(article);
   unwrapImageParagraphs(article);
   fixInlineCode(article);
   return article.toString();
@@ -82,6 +83,15 @@ function unwrapImageParagraphs(article) {
       paragraphText === ''
     ) {
       paragraph.replaceWith(`<figure style="${TAG_STYLES.figure}">${elementChildren[0].toString()}</figure>`);
+    }
+  }
+}
+
+function fixWechatListParagraphs(article) {
+  for (const paragraph of article.querySelectorAll('p')) {
+    const text = paragraph.textContent?.trim?.() || paragraph.text?.trim?.() || '';
+    if (/^(•|\d+\.)\s/.test(text)) {
+      paragraph.setAttribute('style', TAG_STYLES.listParagraph);
     }
   }
 }

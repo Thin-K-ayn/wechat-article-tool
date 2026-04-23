@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="70" y1="40" x2="1120" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F1E6"/>
+      <stop offset="0.55" stop-color="#EEF4EC"/>
+      <stop offset="1" stop-color="#E4EFE8"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0C4A3B"/>
+      <stop offset="1" stop-color="#145B6A"/>
+    </linearGradient>
+    <filter id="shadow" x="32" y="40" width="1136" height="550" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#08231D" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" rx="36" fill="url(#bg)"/>
+  <circle cx="1090" cy="88" r="164" fill="#DDE9E1"/>
+  <circle cx="92" cy="560" r="158" fill="#ECDDCA"/>
+  <path d="M1010 32C1078 72 1114 132 1124 226" stroke="#A6C0B0" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <path d="M106 390C210 342 312 310 448 310" stroke="#D1BEA5" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 24"/>
+
+  <g filter="url(#shadow)">
+    <rect x="64" y="62" width="1072" height="470" rx="30" fill="#FFFDF8"/>
+  </g>
+
+  <rect x="110" y="96" width="286" height="46" rx="23" fill="url(#chip)"/>
+  <text x="142" y="127" fill="#F4F8F2" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700" letter-spacing="1">
+    生成式 AI 导论 03
+  </text>
+
+  <text x="110" y="218" fill="#1A211E" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="62" font-weight="800">
+    大模型为什么能生成
+  </text>
+  <text x="110" y="302" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="76" font-weight="800">
+    没见过的内容
+  </text>
+
+  <text x="114" y="382" fill="#58635F" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="31" font-weight="500">
+    组合空间 / 局部预测 / 自回归生成
+  </text>
+
+  <g transform="translate(718 118)">
+    <rect x="0" y="0" width="312" height="272" rx="28" fill="#F3F7F3" stroke="#D2E0D7" stroke-width="2"/>
+    <text x="34" y="48" fill="#17201D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="700">
+      一步一步预测
+    </text>
+
+    <rect x="34" y="76" width="248" height="48" rx="18" fill="#E7EFEA"/>
+    <text x="72" y="108" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+      下一步该接什么
+    </text>
+
+    <g transform="translate(34 154)">
+      <rect x="0" y="0" width="66" height="54" rx="18" fill="#FFF4E2" stroke="#E1C48F" stroke-width="2"/>
+      <text x="23" y="36" fill="#7B5D24" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="800">
+        北
+      </text>
+
+      <path d="M78 28H110" stroke="#0C4A3B" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="110,19 128,28 110,37" fill="#0C4A3B"/>
+
+      <rect x="142" y="0" width="66" height="54" rx="18" fill="#FFF4E2" stroke="#E1C48F" stroke-width="2"/>
+      <text x="165" y="36" fill="#7B5D24" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="800">
+        京
+      </text>
+
+      <path d="M220 28H242" stroke="#6B8FD0" stroke-width="6" stroke-linecap="round"/>
+      <polygon points="242,19 260,28 242,37" fill="#6B8FD0"/>
+    </g>
+
+    <rect x="214" y="224" width="68" height="28" rx="14" fill="#E7ECF8"/>
+    <text x="226" y="244" fill="#4A67A3" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700">
+      结束
+    </text>
+  </g>
+</svg>
