@@ -146,12 +146,13 @@ async function uploadFlow({ file }) {
   const article = await loadArticleDocument(file, runtimeConfig);
   const imageRefs = extractMarkdownImageRefs(article.markdown);
 
+  const accessToken = await fetchAccessToken(
+    runtimeConfig.wechat.appId,
+    runtimeConfig.wechat.appSecret,
+  );
+
   let preparedMarkdown = article.markdown;
   if (imageRefs.length > 0) {
-    const accessToken = await fetchAccessToken(
-      runtimeConfig.wechat.appId,
-      runtimeConfig.wechat.appSecret,
-    );
     const replacementMap = await uploadInlineImages(accessToken, article, imageRefs);
     preparedMarkdown = replaceMarkdownImageRefs(article.markdown, replacementMap);
   }
@@ -165,7 +166,7 @@ async function uploadFlow({ file }) {
     article,
     html,
     imageRefs,
-    accessToken: '',
+    accessToken,
   });
 
   console.log(`Draft created. media_id=${uploadResult.draft.media_id}`);
