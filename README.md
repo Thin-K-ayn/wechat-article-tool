@@ -21,15 +21,163 @@
 - [发布能力](https://developers.weixin.qq.com/doc/offiaccount/Publish/Publish.html)
 - [上传图文图片](https://developers.weixin.qq.com/doc/service/api/material/permanent/api_uploadimage)
 
+## 适合谁用
+
+适合：
+
+- 已经有公众号，并且能拿到 `AppID` / `AppSecret`
+- 希望用 Markdown 管理文章
+- 希望通过 API 自动上传草稿，而不是每次手动进后台复制粘贴
+
+不适合：
+
+- 想完全自动发布，但账号没有发布接口权限
+- 没有能力配置公众号 API 白名单
+
+## 你需要准备什么
+
+- 一个已开通开发配置的微信公众号
+- 公众号的 `WECHAT_APP_ID` 和 `WECHAT_APP_SECRET`
+- 一台可以访问公众号 API 的机器
+- 这台机器的公网出口 IP，并将它加入公众号后台 `IP 白名单`
+- 如果要用 AI 自动生成文章，还需要一个兼容 OpenAI API 的 `LLM_API_KEY`
+
 ## 安装
 
 ```bash
+git clone git@github.com:Thin-K-ayn/wechat-article-tool.git
 cd wechat-article-tool
 npm install
 cp .env.example .env
 ```
 
 项目内已经附带 `.npmrc`，会优先使用 `npmmirror`，在当前网络环境里更稳定。
+
+## 配置
+
+把 [`.env.example`](/Users/kayngame/Documents/Playground/wechat-article-tool/.env.example) 复制成 `.env` 后，至少要填这几项：
+
+```bash
+WECHAT_APP_ID=...
+WECHAT_APP_SECRET=...
+WECHAT_DEFAULT_AUTHOR=你的公众号作者名
+```
+
+如果你要用 AI 帮你起草文章，再补上：
+
+```bash
+LLM_API_KEY=...
+LLM_MODEL=gpt-5.4-mini
+```
+
+## 第一次使用前必须做的事
+
+### 1. 把服务器出口 IP 加入公众号白名单
+
+在微信公众平台后台：
+
+- `设置与开发`
+- `基本配置`
+- `IP 白名单`
+
+把当前机器的公网出口 IP 加进去。  
+如果这一步没做，调用 API 时会看到：
+
+```text
+invalid ip ... not in whitelist
+```
+
+### 2. 先确认命令能跑起来
+
+```bash
+npm run check
+```
+
+### 3. 建议先用示例文章跑通一次
+
+```bash
+npm run tool -- render --file ./articles/example.md
+npm run tool -- upload --file ./articles/example.md
+```
+
+如果上传成功，终端会输出一条 `media_id`。  
+这说明文章已经进入公众号草稿箱，你可以在微信手机端或公众号后台手动发布。
+
+## 如何使用
+
+这套工具当前最推荐的工作流是：
+
+1. 写 Markdown 文章
+2. 本地预览 HTML
+3. 用 API 推送到公众号草稿箱
+4. 在微信手机端或公众号后台手动发布
+
+### 方式 1：自己写文章，再上传草稿
+
+```bash
+npm run tool -- render --file ./articles/example.md
+npm run tool -- upload --file ./articles/example.md
+```
+
+### 方式 2：让 AI 先生成，再上传草稿
+
+```bash
+npm run tool -- run \
+  --topic "用 AI 搭建公众号自动写作流程" \
+  --audience "独立开发者" \
+  --style "专业但不端着，适合公众号阅读" \
+  --cover ./assets/cover.png \
+  --output ./articles/ai-wechat.md
+```
+
+### 方式 3：只生成，不上传
+
+```bash
+npm run tool -- generate \
+  --topic "用 AI 搭建公众号自动写作流程" \
+  --audience "独立开发者" \
+  --style "专业但不端着，适合公众号阅读" \
+  --output ./articles/ai-wechat.md
+```
+
+## 一次完整示例
+
+```bash
+# 1. 生成一篇文章
+npm run tool -- generate \
+  --topic "为什么 AI Agent 不能一上来就多智能体" \
+  --audience "AI 从业者" \
+  --style "清楚、克制、适合公众号阅读" \
+  --output ./articles/agent.md
+
+# 2. 本地渲染预览
+npm run tool -- render --file ./articles/agent.md
+
+# 3. 推到公众号草稿箱
+npm run tool -- upload --file ./articles/agent.md
+```
+
+完成后：
+
+- 到微信手机端找到这篇草稿
+- 检查封面、摘要、图片、排版
+- 手动点击发布
+
+## 可选：安装成全局命令
+
+如果你不想每次都写 `npm run tool --`，可以在仓库目录里执行：
+
+```bash
+npm link
+wechat-article-tool --help
+```
+
+这样之后就可以直接运行：
+
+```bash
+wechat-article-tool render --file ./articles/example.md
+wechat-article-tool upload --file ./articles/example.md
+```
 
 ## Markdown 文章格式
 
@@ -116,3 +264,31 @@ npm run rasterize:svg -- ./assets/a.svg ./assets/b.svg
 - `./dist/<slug>.wechat.html`
 
 这个文件方便你先本地预览排版，再决定是否上传。
+
+## 常见问题
+
+### 1. 为什么上传时报 `invalid ip ... not in whitelist`
+
+说明当前机器的公网出口 IP 还没加入公众号后台白名单。
+
+### 2. 为什么能建草稿，但不能 API 直接发布
+
+很多账号没有发布接口权限。  
+这个仓库当前默认只做：
+
+- 上传图片
+- 创建草稿
+
+最后发布动作仍然建议在微信手机端或后台手动完成。
+
+### 3. 为什么文章图片上传后显示异常
+
+建议：
+
+- 封面图使用 `jpg/png`
+- 正文图尽量控制在 `1MB` 以内
+- 结构图优先先转成 `png`
+
+### 4. 哪个文件是给别人复制配置用的
+
+- [`.env.example`](/Users/kayngame/Documents/Playground/wechat-article-tool/.env.example)
