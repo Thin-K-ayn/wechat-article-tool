@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">机器学习和深度学习是什么</title>
+  <desc id="desc">生成式AI导论第二讲封面</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4efe4"/>
+      <stop offset="55%" stop-color="#eef3eb"/>
+      <stop offset="100%" stop-color="#e6efe8"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1110" cy="90" r="180" fill="#d8e6de" opacity="0.65"/>
+  <circle cx="90" cy="550" r="150" fill="#eadfc7" opacity="0.7"/>
+  <rect x="72" y="62" width="260" height="54" rx="27" fill="#0f5a4f"/>
+  <text x="202" y="97" font-size="28" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#ffffff">生成式 AI 导论</text>
+  <text x="72" y="206" font-size="66" font-weight="700" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#182022">机器学习和</text>
+  <text x="72" y="290" font-size="66" font-weight="700" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#182022">深度学习是什么</text>
+  <text x="72" y="370" font-size="34" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#0f5a4f">第二讲</text>
+  <text x="72" y="426" font-size="28" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#536065">人工智能 / 机器学习 / 深度学习 / 生成式 AI</text>
+  <g transform="translate(752 132)">
+    <rect x="0" y="0" width="340" height="236" rx="30" fill="#f5f7f3" stroke="#b9d1c2" stroke-width="3"/>
+    <text x="170" y="56" font-size="30" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#1b2a2a">人工智能</text>
+    <rect x="65" y="92" width="210" height="64" rx="20" fill="#f8ecd6" stroke="#d8b36a" stroke-width="3"/>
+    <text x="170" y="133" font-size="26" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#7f5a16">生成式 AI</text>
+    <rect x="8" y="252" width="150" height="60" rx="20" fill="#ffffff" stroke="#0f5a4f" stroke-width="3"/>
+    <text x="83" y="291" font-size="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#0f5a4f">机器学习</text>
+    <rect x="182" y="252" width="150" height="60" rx="20" fill="#ffffff" stroke="#6f8fcb" stroke-width="3"/>
+    <text x="257" y="291" font-size="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#3d5d9e">深度学习</text>
+    <path d="M83 252 C83 216,120 194,156 174" fill="none" stroke="#0f5a4f" stroke-width="5" stroke-linecap="round"/>
+    <path d="M257 252 C257 214,222 192,188 174" fill="none" stroke="#6f8fcb" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

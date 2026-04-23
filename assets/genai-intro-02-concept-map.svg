@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="860" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">AI、机器学习、深度学习与生成式AI的关系图</title>
+  <desc id="desc">说明人工智能是目标，生成式AI是其中一个目标，机器学习是手段，深度学习是更强的一类机器学习手段。</desc>
+  <rect width="1200" height="860" fill="#f8f6ef"/>
+  <rect x="160" y="60" width="880" height="290" rx="36" fill="#eef4ef" stroke="#bfd4c2" stroke-width="4"/>
+  <text x="600" y="118" font-size="42" font-weight="700" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#1c2424">人工智能</text>
+  <text x="600" y="160" font-size="24" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#5a6666">总目标：让机器展现原本需要智能才能完成的能力</text>
+
+  <rect x="300" y="184" width="600" height="152" rx="30" fill="#fbefd9" stroke="#ddb66f" stroke-width="4"/>
+  <text x="600" y="238" font-size="34" font-weight="700" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#7c5a16">生成式 AI</text>
+  <text x="600" y="274" font-size="21" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#7c5a16">人工智能中的一个目标：</text>
+  <text x="600" y="318" font-size="19" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#7c5a16">生成文字、图像、语音等复杂对象</text>
+
+  <rect x="120" y="500" width="410" height="142" rx="28" fill="#ffffff" stroke="#0f5a4f" stroke-width="4"/>
+  <text x="325" y="552" font-size="34" font-weight="700" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#0f5a4f">机器学习</text>
+  <text x="325" y="594" font-size="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#4f5e5c">手段：从数据里</text>
+  <text x="325" y="626" font-size="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#4f5e5c">自动找函数</text>
+
+  <rect x="670" y="500" width="410" height="142" rx="28" fill="#ffffff" stroke="#5c7db9" stroke-width="4"/>
+  <text x="875" y="552" font-size="34" font-weight="700" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#45659f">深度学习</text>
+  <text x="875" y="594" font-size="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#596675">更强的一类</text>
+  <text x="875" y="626" font-size="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#596675">机器学习手段</text>
+
+  <path d="M325 500 C325 425,402 382,498 348" fill="none" stroke="#0f5a4f" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="494,335 517,343 500,360" fill="#0f5a4f"/>
+
+  <path d="M875 500 C875 426,796 382,702 348" fill="none" stroke="#5c7db9" stroke-width="6" stroke-linecap="round"/>
+  <polygon points="706,335 682,343 699,360" fill="#5c7db9"/>
+
+  <path d="M665 570 C627 570,598 570,548 570" fill="none" stroke="#8a9aa8" stroke-width="5" stroke-linecap="round"/>
+  <polygon points="553,557 530,570 553,583" fill="#8a9aa8"/>
+  <text x="600" y="534" font-size="16" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#6a7682">属于机器学习</text>
+  <text x="600" y="556" font-size="16" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#6a7682">的一种</text>
+
+  <text x="600" y="736" font-size="28" font-weight="700" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#222a2a">一句话记住：</text>
+  <text x="600" y="784" font-size="26" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#222a2a">人工智能是目标，生成式 AI 是目标之一，</text>
+  <text x="600" y="822" font-size="26" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" fill="#222a2a">机器学习是手段，深度学习是更强的一类手段。</text>
+</svg>

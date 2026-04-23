@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="700" viewBox="0 0 1200 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="90" y1="60" x2="1110" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBF7F0"/>
+      <stop offset="1" stop-color="#EEF4F1"/>
+    </linearGradient>
+    <filter id="shadow" x="70" y="80" width="460" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#17322B" flood-opacity="0.08"/>
+    </filter>
+    <filter id="shadow2" x="670" y="80" width="460" height="520" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#17322B" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="700" rx="36" fill="url(#bg)"/>
+
+  <text x="96" y="96" fill="#18201D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="44" font-weight="800">
+    生成 vs 分类
+  </text>
+  <text x="98" y="132" fill="#5E6864" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="500">
+    两者都会“输出结果”，但解决的问题根本不一样
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="90" y="150" width="420" height="440" rx="30" fill="#FFFDF9"/>
+  </g>
+  <g filter="url(#shadow2)">
+    <rect x="690" y="150" width="420" height="440" rx="30" fill="#FFFDF9"/>
+  </g>
+
+  <rect x="124" y="186" width="120" height="42" rx="21" fill="#EDE3D4"/>
+  <text x="158" y="214" fill="#7A6142" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">
+    分类
+  </text>
+
+  <text x="124" y="280" fill="#17201D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="30" font-weight="700">
+    从有限选项里
+  </text>
+  <text x="124" y="322" fill="#17201D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="30" font-weight="700">
+    选一个答案
+  </text>
+
+  <rect x="124" y="364" width="108" height="46" rx="16" fill="#F5F1E8" stroke="#DBC9AE" stroke-width="2"/>
+  <text x="155" y="394" fill="#775B2B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+    猫
+  </text>
+  <rect x="248" y="364" width="108" height="46" rx="16" fill="#F5F1E8" stroke="#DBC9AE" stroke-width="2"/>
+  <text x="279" y="394" fill="#775B2B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+    狗
+  </text>
+  <rect x="372" y="364" width="120" height="46" rx="16" fill="#F5F1E8" stroke="#DBC9AE" stroke-width="2"/>
+  <text x="392" y="394" fill="#775B2B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+    垃圾邮件
+  </text>
+
+  <g transform="translate(124 454)">
+    <circle cx="12" cy="12" r="12" fill="#D2A24B"/>
+    <text x="36" y="20" fill="#4B5753" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600">
+      输出空间是有限的
+    </text>
+  </g>
+  <g transform="translate(124 498)">
+    <circle cx="12" cy="12" r="12" fill="#D2A24B"/>
+    <text x="36" y="20" fill="#4B5753" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600">
+      本质是判断该选哪一个
+    </text>
+  </g>
+
+  <rect x="724" y="186" width="120" height="42" rx="21" fill="#DBECE3"/>
+  <text x="758" y="214" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">
+    生成
+  </text>
+
+  <text x="724" y="280" fill="#17201D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="30" font-weight="700">
+    产出复杂且有结构的
+  </text>
+  <text x="724" y="322" fill="#17201D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="30" font-weight="700">
+    新对象
+  </text>
+
+  <rect x="724" y="364" width="92" height="46" rx="16" fill="#E9F2EC" stroke="#C8DCCF" stroke-width="2"/>
+  <text x="751" y="394" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+    文章
+  </text>
+  <rect x="834" y="364" width="92" height="46" rx="16" fill="#E9F2EC" stroke="#C8DCCF" stroke-width="2"/>
+  <text x="861" y="394" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+    图片
+  </text>
+  <rect x="944" y="364" width="92" height="46" rx="16" fill="#E9F2EC" stroke="#C8DCCF" stroke-width="2"/>
+  <text x="971" y="394" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+    语音
+  </text>
+
+  <g transform="translate(724 454)">
+    <circle cx="12" cy="12" r="12" fill="#0C4A3B"/>
+    <text x="36" y="20" fill="#4B5753" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600">
+      输出空间近乎无法穷举
+    </text>
+  </g>
+  <g transform="translate(724 498)">
+    <circle cx="12" cy="12" r="12" fill="#0C4A3B"/>
+    <text x="36" y="20" fill="#4B5753" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600">
+      结果由很多小单位组成
+    </text>
+  </g>
+  <g transform="translate(724 542)">
+    <circle cx="12" cy="12" r="12" fill="#0C4A3B"/>
+    <text x="36" y="20" fill="#4B5753" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="600">
+      目标是拼出新的合理结果
+    </text>
+  </g>
+
+  <path d="M544 396H656" stroke="#9AAFA5" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 18"/>
+  <circle cx="600" cy="396" r="46" fill="#F5FBF8" stroke="#D4E3DB" stroke-width="3"/>
+  <text x="570" y="386" fill="#145B6A" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">
+    都会
+  </text>
+  <text x="561" y="414" fill="#145B6A" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">
+    输出
+  </text>
+</svg>

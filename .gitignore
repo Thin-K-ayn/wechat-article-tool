@@ -1,0 +1,11 @@
+node_modules/
+.claude/
+.env
+.wechat-profile/
+.wechat-active-profile*.json
+dist/
+tmp/
+
+# Ignore real article drafts, but keep one example article in the repo.
+articles/*.md
+!articles/example.md

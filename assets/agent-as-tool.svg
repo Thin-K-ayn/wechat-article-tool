@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="320" viewBox="0 0 1000 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="0" y="0" width="1000" height="320" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0B1D19" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  <rect width="1000" height="320" rx="28" fill="#F5F4EF"/>
+  <g filter="url(#shadow)">
+    <rect x="40" y="32" width="920" height="256" rx="24" fill="#FFFDF9"/>
+  </g>
+
+  <text x="66" y="78" fill="#17201D" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+    工具化智能体：把成熟智能体
+  </text>
+  <text x="66" y="110" fill="#5A6460" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600">
+    封成一个清晰接口
+  </text>
+
+  <g transform="translate(92 146)">
+    <circle cx="60" cy="46" r="28" fill="#E4F0EA"/>
+    <circle cx="60" cy="46" r="12" fill="#0C4A3B"/>
+    <text x="-8" y="100" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="19" font-weight="700">
+      上层智能体
+    </text>
+
+    <path d="M92 46H188" stroke="#91A6A0" stroke-width="6" stroke-linecap="round"/>
+
+    <rect x="190" y="12" width="186" height="68" rx="22" fill="#EDF4F6" stroke="#BBD1D8" stroke-width="2"/>
+    <text x="232" y="54" fill="#145B6A" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">
+      工具接口
+    </text>
+
+    <path d="M376 46H456" stroke="#91A6A0" stroke-width="6" stroke-linecap="round"/>
+
+    <rect x="458" y="-8" width="282" height="120" rx="24" fill="#FFF5E5" stroke="#E4C689" stroke-width="2"/>
+    <text x="478" y="34" fill="#7A571A" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">
+      被封装的智能体
+    </text>
+    <text x="478" y="68" fill="#9A712C" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600">
+      内部仍可调用模型、工具
+    </text>
+    <text x="478" y="92" fill="#9A712C" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600">
+      和上下文
+    </text>
+  </g>
+</svg>

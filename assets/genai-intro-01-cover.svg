@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1185" height="510" viewBox="0 0 1185 510" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="102" y1="66" x2="1060" y2="454" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F1E7"/>
+      <stop offset="1" stop-color="#E8F0EB"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0C4A3B"/>
+      <stop offset="1" stop-color="#145B6A"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1185" height="510" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#08231D" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1185" height="510" rx="36" fill="url(#bg)"/>
+  <circle cx="1030" cy="92" r="128" fill="#DDEAE2"/>
+  <circle cx="102" cy="442" r="136" fill="#EDE1D2"/>
+  <path d="M986 40C1046 72 1081 126 1092 216" stroke="#9EBBAB" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <path d="M120 370C214 320 318 292 434 292" stroke="#CAB79F" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 24"/>
+
+  <g filter="url(#shadow)">
+    <rect x="74" y="60" width="1037" height="390" rx="30" fill="#FFFDF8"/>
+  </g>
+
+  <rect x="122" y="96" width="270" height="44" rx="22" fill="url(#chip)"/>
+  <text x="150" y="126" fill="#F4F8F2" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700" letter-spacing="1">
+    生成式 AI 导论 01
+  </text>
+
+  <text x="122" y="208" fill="#1B201D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="54" font-weight="700">
+    什么是
+  </text>
+  <text x="122" y="294" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="82" font-weight="800">
+    生成式 AI
+  </text>
+  <text x="126" y="360" fill="#59635F" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="34" font-weight="500">
+    先别急着谈 ChatGPT
+  </text>
+
+  <text x="126" y="420" fill="#56605C" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="500">
+    复杂且有结构的对象 / 生成 vs 分类
+  </text>
+
+  <g transform="translate(700 110)">
+    <rect x="0" y="0" width="318" height="250" rx="28" fill="#F4F7F3" stroke="#D7E3DB" stroke-width="2"/>
+    <text x="34" y="46" fill="#111A17" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="700">
+      生成的关键
+    </text>
+
+    <rect x="34" y="74" width="250" height="48" rx="18" fill="#E4EFE8"/>
+    <text x="60" y="106" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+      复杂且有结构的对象
+    </text>
+
+    <g transform="translate(34 146)">
+      <rect x="0" y="0" width="70" height="42" rx="15" fill="#FFF5E7" stroke="#E1CFAC" stroke-width="2"/>
+      <text x="20" y="28" fill="#7B5D24" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700">
+        文章
+      </text>
+
+      <rect x="92" y="0" width="70" height="42" rx="15" fill="#FFF5E7" stroke="#E1CFAC" stroke-width="2"/>
+      <text x="112" y="28" fill="#7B5D24" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700">
+        图片
+      </text>
+
+      <rect x="184" y="0" width="70" height="42" rx="15" fill="#FFF5E7" stroke="#E1CFAC" stroke-width="2"/>
+      <text x="204" y="28" fill="#7B5D24" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700">
+        语音
+      </text>
+    </g>
+
+    <g transform="translate(34 208)">
+      <circle cx="12" cy="12" r="12" fill="#D2A24B"/>
+      <text x="36" y="20" fill="#495651" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600">
+        不是从固定标签里挑一个
+      </text>
+    </g>
+  </g>
+</svg>

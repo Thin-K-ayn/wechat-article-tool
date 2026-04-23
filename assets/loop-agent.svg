@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980" height="340" viewBox="0 0 980 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="0" y="0" width="980" height="340" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0B1D19" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="980" height="340" rx="28" fill="#F7F4EE"/>
+  <g filter="url(#shadow)">
+    <rect x="42" y="34" width="896" height="272" rx="24" fill="#FFFDF9"/>
+  </g>
+
+  <text x="66" y="82" fill="#17201D" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="24" font-weight="700">
+    循环结构：先执行，再评审
+  </text>
+  <text x="66" y="114" fill="#5A6460" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="600">
+    未通过就回到上一轮，直到结果达标
+  </text>
+
+  <rect x="360" y="132" width="220" height="42" rx="21" fill="#EDF4F6" stroke="#B9D2D9" stroke-width="2"/>
+  <text x="392" y="159" fill="#145B6A" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700">
+    未通过就回到上一轮
+  </text>
+  <path d="M360 154C312 154 258 164 214 192" stroke="#145B6A" stroke-width="4" stroke-linecap="round"/>
+  <path d="M214 192L200 194L208 180Z" fill="#145B6A"/>
+
+  <g transform="translate(126 188)">
+    <circle cx="56" cy="30" r="30" fill="#E3F0E8"/>
+    <circle cx="56" cy="30" r="13" fill="#0C4A3B"/>
+    <text x="18" y="98" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">
+      生成
+    </text>
+  </g>
+
+  <path d="M212 218H380" stroke="#97A99F" stroke-width="6" stroke-linecap="round"/>
+
+  <g transform="translate(380 182)">
+    <rect x="0" y="0" width="180" height="72" rx="22" fill="#FFF4E2" stroke="#E4C88E" stroke-width="2"/>
+    <text x="54" y="46" fill="#7A571A" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="700">
+      评审
+    </text>
+  </g>
+
+  <path d="M560 218H726" stroke="#97A99F" stroke-width="6" stroke-linecap="round"/>
+
+  <g transform="translate(726 188)">
+    <circle cx="56" cy="30" r="30" fill="#E7EFFA"/>
+    <circle cx="56" cy="30" r="13" fill="#315EBA"/>
+    <text x="18" y="98" fill="#315EBA" font-family="PingFang SC, Noto Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700">
+      输出
+    </text>
+  </g>
+</svg>

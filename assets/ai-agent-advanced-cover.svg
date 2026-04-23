@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1185" height="510" viewBox="0 0 1185 510" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="92" y1="54" x2="1058" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F1E7"/>
+      <stop offset="1" stop-color="#E7EEF4"/>
+    </linearGradient>
+    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0C4A3B"/>
+      <stop offset="1" stop-color="#145B6A"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1185" height="510" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#112721" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="1185" height="510" rx="36" fill="url(#bg)"/>
+  <circle cx="1044" cy="106" r="118" fill="#DCE8EE"/>
+  <circle cx="122" cy="430" r="132" fill="#EEE2D4"/>
+  <path d="M980 72C1042 102 1079 156 1088 238" stroke="#A3BCC6" stroke-width="10" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <path d="M104 354C218 308 336 284 470 286" stroke="#C6B39D" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 24"/>
+
+  <g filter="url(#shadow)">
+    <rect x="74" y="60" width="1037" height="390" rx="30" fill="#FFFDF8"/>
+  </g>
+
+  <rect x="122" y="88" width="410" height="44" rx="22" fill="url(#chip)"/>
+  <text x="152" y="118" fill="#F4F8F2" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" letter-spacing="1">
+    AI AGENT 进阶设计模式
+  </text>
+
+  <text x="123" y="184" fill="#1A1F1D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="36" font-weight="600">
+    做 AI Agent，进阶不是
+  </text>
+  <text x="123" y="252" fill="#1A1F1D" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="70" font-weight="800">
+    加角色
+  </text>
+  <text x="123" y="320" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="52" font-weight="800">
+    而是学会
+  </text>
+  <text x="123" y="376" fill="#0C4A3B" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="52" font-weight="800">
+    这 3 种协作结构
+  </text>
+  <text x="127" y="412" fill="#56605C" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="500">
+    循环 / 协调者 / 工具化智能体
+  </text>
+
+  <g transform="translate(742 106)">
+    <rect x="0" y="0" width="272" height="236" rx="28" fill="#F4F8FA" stroke="#D7E2E7" stroke-width="2"/>
+
+    <g transform="translate(30 32)">
+      <circle cx="68" cy="50" r="28" fill="#E4F0EA"/>
+      <circle cx="68" cy="50" r="12" fill="#0C4A3B"/>
+      <path d="M96 50H140" stroke="#9FB4A9" stroke-width="6" stroke-linecap="round"/>
+      <rect x="142" y="24" width="82" height="52" rx="18" fill="#FFF6E7" stroke="#E4D1AF" stroke-width="2"/>
+      <text x="160" y="58" fill="#875F17" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700">
+        循环
+      </text>
+      <path d="M180 84C180 108 154 120 128 112" stroke="#D0A85B" stroke-width="5" stroke-linecap="round"/>
+      <path d="M126 112L136 104" stroke="#D0A85B" stroke-width="5" stroke-linecap="round"/>
+      <path d="M126 112L140 116" stroke="#D0A85B" stroke-width="5" stroke-linecap="round"/>
+    </g>
+
+    <g transform="translate(36 130)">
+      <circle cx="36" cy="42" r="16" fill="#DDE8F8"/>
+      <circle cx="112" cy="42" r="16" fill="#DDE8F8"/>
+      <circle cx="188" cy="42" r="16" fill="#DDE8F8"/>
+      <path d="M52 42H96" stroke="#90A9D9" stroke-width="5" stroke-linecap="round"/>
+      <path d="M128 42H172" stroke="#90A9D9" stroke-width="5" stroke-linecap="round"/>
+      <rect x="86" y="-8" width="52" height="28" rx="14" fill="#0C4A3B"/>
+      <text x="96" y="11" fill="#F4F8F2" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700">
+        协调
+      </text>
+      <rect x="144" y="70" width="100" height="34" rx="16" fill="#EAF1F7"/>
+      <text x="158" y="92" fill="#145B6A" font-family="PingFang SC, Noto Sans SC, Source Han Sans SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="700">
+        工具智能体
+      </text>
+    </g>
+  </g>
+</svg>
