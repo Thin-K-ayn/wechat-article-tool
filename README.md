@@ -2,6 +2,21 @@
 
 一个本地命令行工具，用来把 `选题 -> AI 写稿 -> Markdown 转公众号 HTML -> API 推送草稿箱` 串成一条流水线。
 
+## 给 Coding Agent 的说明
+
+这个仓库不是一个“自己带模型运行”的独立 AI 产品，它更像一个给 `Codex`、`Claude Code` 等 coding agent 直接调用的工作流工具。
+
+推荐理解方式：
+
+- `agent` 负责写文章、改文章、整理 Markdown
+- `wechat-article-tool` 负责渲染预览、上传图片、创建公众号草稿
+- 最终发布动作由你在微信手机端或后台手动完成
+
+这意味着：
+
+- 如果文章内容由 coding agent 直接写出来，你 **不需要** 额外配置 `LLM_API_KEY` 才能使用 `render` 和 `upload`
+- 只有当你想让这个 CLI 自己调用模型来生成文章时，才需要配置 `LLM_API_KEY` 并使用 `generate` / `run`
+
 当前版本只保留一条通道：
 
 - `API`：调用公众号官方接口上传图片、创建草稿，再由你在手机端或公众号后台手动发布。
@@ -28,6 +43,7 @@
 - 已经有公众号，并且能拿到 `AppID` / `AppSecret`
 - 希望用 Markdown 管理文章
 - 希望通过 API 自动上传草稿，而不是每次手动进后台复制粘贴
+- 希望让 `Codex`、`Claude Code` 这类 coding agent 直接参与写稿和上传流程
 
 不适合：
 
@@ -40,7 +56,7 @@
 - 公众号的 `WECHAT_APP_ID` 和 `WECHAT_APP_SECRET`
 - 一台可以访问公众号 API 的机器
 - 这台机器的公网出口 IP，并将它加入公众号后台 `IP 白名单`
-- 如果要用 AI 自动生成文章，还需要一个兼容 OpenAI API 的 `LLM_API_KEY`
+- 如果要让 CLI 自己自动生成文章，还需要一个兼容 OpenAI API 的 `LLM_API_KEY`
 
 ## 安装
 
@@ -68,6 +84,35 @@ WECHAT_DEFAULT_AUTHOR=你的公众号作者名
 ```bash
 LLM_API_KEY=...
 LLM_MODEL=gpt-5.4-mini
+```
+
+如果你是把这个仓库交给 coding agent 使用，通常有两种模式：
+
+### 模式 1：Agent 直接写文章
+
+这种模式下：
+
+- agent 直接创建或修改 `./articles/*.md`
+- 你只需要配置公众号相关变量
+- 然后使用：
+
+```bash
+npm run tool -- render --file ./articles/your-article.md
+npm run tool -- upload --file ./articles/your-article.md
+```
+
+这种模式 **不需要** `LLM_API_KEY`。
+
+### 模式 2：CLI 自己调用模型生成文章
+
+这种模式下：
+
+- 你需要配置 `LLM_API_KEY` 和 `LLM_MODEL`
+- 然后使用：
+
+```bash
+npm run tool -- generate ...
+npm run tool -- run ...
 ```
 
 ## 第一次使用前必须做的事
